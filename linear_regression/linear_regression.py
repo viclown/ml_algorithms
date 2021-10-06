@@ -18,5 +18,8 @@ class LinearRegression:
         r_squared = 1 - u/v
         return r_squared
     
-    def coefficients(self):
+    def coefficients(self) -> np.array:
         return self.weights
+    
+    def metrics_mean_error(self, y_true: np.array, y_pred: np.array) -> float:
+        return (np.fabs(y_true - y_pred)).sum()/(y_true.shape[0])
