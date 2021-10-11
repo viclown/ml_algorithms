@@ -23,4 +23,3 @@ class LinearRegression:
     
     def metrics_mean_error(self, y_true: np.ndarray, y_pred: np.ndarray) -> float:
         return (np.fabs(y_true - y_pred)).sum()/(y_true.shape[0])
-    
